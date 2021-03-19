@@ -1,14 +1,14 @@
 .App {
   text-align: center;
-  border: 2px solid blue;
+  border: 3px solid blue;
   width: 50%;
-  margin: auto;
+  margin: 2rem auto;
   font-family: "Press Start 2P", cursive;
 }
 
 .App-header {
   justify-content: center;
-  color: rgb(0, 183, 255);
+  color: rgb(84, 204, 252);
 }
 
 .countryScoreBoard {
@@ -23,11 +23,11 @@
 
 .countryName {
   width: 100%;
-  color: rgb(0, 183, 255);
+  color: rgb(84, 204, 252);
 }
 
 .scores {
-  border: 1px solid;
+  border: 2px solid;
 }
 
 .nameScoreContainer {
@@ -35,7 +35,6 @@
   justify-content: space-between;
   flex-wrap: wrap;
   padding: 1rem;
-  /* font-size: 1.5rem; */
 }
 
 .name {
@@ -47,8 +46,11 @@
   width: 40%;
   text-align: right;
   color: rgb(165, 1, 1);
+  font-weight: 600;
+  font-size: 1.2rem;
 }
 
 hr {
-  width: 99%;
+  width: 97%;
+  border: 1px solid;
 }
