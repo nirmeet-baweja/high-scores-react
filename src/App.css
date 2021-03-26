@@ -11,6 +11,17 @@
   color: rgb(84, 204, 252);
 }
 
+.sortButton {
+  padding: 0.5rem;
+  margin: 1rem;
+  font-family: "Press Start 2P", cursive;
+  box-shadow: 0 0.3rem 0.5rem -0.25rem;
+}
+
+.sortButton:hover {
+  box-shadow: 0 0.5rem 0.5rem -0.25rem;
+}
+
 .countryScoreBoard {
   display: flex;
   flex-wrap: wrap;

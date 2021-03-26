@@ -2,6 +2,7 @@ import React from "react";
 import OnePersonScore from "./OnePersonScore";
 
 const ScoreBoard = (props) => {
+
   return (
     <div className="countryScoreBoard">
       <h2 className="countryName">
