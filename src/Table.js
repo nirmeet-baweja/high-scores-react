@@ -1,6 +1,6 @@
 import React from "react";
-import SortButtonScoreTable from "./SortButtonScoreTable";
-import WorldWideScores from "./WorldWideScores";
+import SortButtonScoreTable from "./country/SortButtonScoreTable";
+import WorldWideScores from "./worldwide/WorldWideScores";
 import AllCountryScores from "./data/AllCountryScores";
 
 const Table = (props) => {

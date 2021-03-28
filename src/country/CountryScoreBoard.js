@@ -1,7 +1,7 @@
 import React from "react";
 import ScoresTable from "./ScoresTable";
 
-const ScoreBoard = (props) => {
+const CountryScoreBoard = (props) => {
   return (
     <div className="countryScoreBoard">
       <h2 className="countryName">
@@ -12,4 +12,4 @@ const ScoreBoard = (props) => {
   );
 };
 
-export default ScoreBoard;
+export default CountryScoreBoard;

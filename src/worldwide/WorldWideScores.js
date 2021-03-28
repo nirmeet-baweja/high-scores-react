@@ -1,6 +1,6 @@
 import React from "react";
-import { sortByScoreDsc } from "./sortByScore";
-import OnePersonScore from "./OnePersonScore";
+import { sortByScoreDsc } from "../javaScriptFunctions/sortByScore";
+import OnePersonScore from "../commonComponents/OnePersonScore";
 
 const WorldWideScores = (props) => {
   let allScores = [];

@@ -1,5 +1,5 @@
 import React from "react";
-import OnePersonScore from "./OnePersonScore";
+import OnePersonScore from "../commonComponents/OnePersonScore";
 
 const ScoresTable = (props) => {
   return (

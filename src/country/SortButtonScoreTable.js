@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 
 // Import data and functions
-import AllCountryScores from "./data/AllCountryScores";
-import { sortByScoreAsc, sortByScoreDsc } from "./sortByScore";
+import AllCountryScores from "../data/AllCountryScores";
+import { sortByScoreAsc, sortByScoreDsc } from "../javaScriptFunctions/sortByScore";
 
 // import Components
-import ScoreBoard from "./ScoreBoard";
-import sortByCountry from "./sortByCountry";
+import CountryScoreBoard from "./CountryScoreBoard";
+import sortByCountry from "../javaScriptFunctions/sortByCountry";
 
 const SortButtonScoreTable = () => {
   const sortedCountryScores = AllCountryScores.slice().sort(sortByCountry);
@@ -37,7 +37,7 @@ const SortButtonScoreTable = () => {
         Sort By Score ({prevSortOrder.toUpperCase()})
       </button>
       {countryScoreData.map((oneCountryScores, index) => (
-        <ScoreBoard key={index} oneCountryScores={oneCountryScores} />
+        <CountryScoreBoard key={index} oneCountryScores={oneCountryScores} />
       ))}
     </>
   );
