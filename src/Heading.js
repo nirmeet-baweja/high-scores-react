@@ -1,9 +1,9 @@
 import React from "react";
 
-const Heading = () => {
+const Heading = (props) => {
   return (
     <header className="App-header">
-      <h1 className="App-title">High Scores Per Country</h1>
+      <h1 className="App-title">{props.pageTitle}</h1>
     </header>
   );
 };

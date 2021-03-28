@@ -1,46 +1,30 @@
 import React, { useState } from "react";
-import AllCountryScores from "./data/AllCountryScores";
-import ScoreBoard from "./ScoreBoard";
-import sortByScoreDsc from "./sortByScoreDsc";
-import sortByScoreAsc from "./sortByScoreAsc";
-import sortByCountry from "./sortByCountry";
-
 import Heading from "./Heading";
 
 import "./App.css";
+import Table from "./Table";
 
 function App() {
-  AllCountryScores.sort(sortByCountry);
+  const [tableType, setTableType] = useState("country");
+  const [prevTableType, setPrevTableType] = useState("worlwide");
 
-  const [sortOrder, setSortOrder] = useState("asc");
-  const [prevSortOrder, setPrevSortOrder] = useState("");
-  const [countryScoreData, setCountryScoreData] = useState(AllCountryScores);
+  function toggleTableType() {
+    setPrevTableType(tableType);
 
-  const sortScores = () => {
-    if (sortOrder === "asc") {
-      AllCountryScores.forEach((oneCountryScores) => {
-        oneCountryScores.scores.sort(sortByScoreDsc);
-      });
-      setSortOrder("dsc");
+    if (tableType === "country") {
+      setTableType("worldwide");
     } else {
-      AllCountryScores.forEach((oneCountryScores) => {
-        oneCountryScores.scores.sort(sortByScoreAsc);
-      });
-      setSortOrder("asc");
+      setTableType("country");
     }
-    setPrevSortOrder(sortOrder);
-    setCountryScoreData(AllCountryScores);
-  };
+  }
 
   return (
     <div className="App">
-      <Heading />
-      <button className="sortButton" onClick={sortScores}>
-        Sort By Score ({prevSortOrder.toUpperCase()})
+      <Heading pageTitle={`High Scores - ${tableType}`} />
+      <button className="typeToggleBtn" onClick={toggleTableType}>
+        View {prevTableType} Scores
       </button>
-      {countryScoreData.map((oneCountryScores, index) => (
-        <ScoreBoard key={index} oneCountryScores={oneCountryScores} />
-      ))}
+      <Table tableType={tableType} />
     </div>
   );
 }
